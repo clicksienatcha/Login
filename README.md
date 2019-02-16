@@ -1,7 +1,8 @@
 # Login
 
 extract file <BR>
-1 Open Command <BR>
-2 cd Login-master <BR>
-3 npm i<BR>
-4 expo start<BR> 
+$ Open Command <BR>
+$ cd Login-master <BR>
+$ npm install -g expo-cli <BR>  
+$ npm i<BR>
+$ expo start<BR> 

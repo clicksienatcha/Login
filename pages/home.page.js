@@ -76,47 +76,16 @@ export default class HomePage extends React.Component {
     const { email } = this.state;
     const { password } = this.state;
     
-    
-    fetch('http://mis.oae.go.th/app_api_insert/checklogin.php', {
-        method: 'post',
-        header: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-           
-            email: email,
-            password: password
-        })
-    })
-        .then(response => response.json())
-        .then((response) => {
-         
-                
-                if(response=='true'){
-                  alert('Login Successed');
-                  this.setState({
-                    nodata:'',
-                  });
-                }else{
-                  console.log('test');
+    if(email=='natcha@gmail.com' && password=='123456'){
+      alert('Login Successed');
+      this.setState({
+        nodata:'',
+      });
+    }else{
                   this.setState({
                     nodata:'E-mail or Password is incorrect',
                   });
-                
-                  
-                }
-                
-                //this.props.navigation.navigate('Home',items);
-           
-        })
-        .catch((error) => {
-            console.error(error);
-        })
-    
-   
-      
-
+    }
     
 }
 
